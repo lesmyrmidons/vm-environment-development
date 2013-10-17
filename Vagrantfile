@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant::Config.run do |config|
+  config.vm.define :sf do |sf_config|
+    sf_config.vm.box = "wheezy64"
+    sf_config.vm.box_url = "http://downloads.shadoware.org/wheezy64.box"
+    sf_config.vm.network :hostonly, "192.168.40.10"
+    sf_config.vm.share_folder("v-root", "/vagrant", ".", :nfs => true)
+
+    sf_config.vm.provision "ansible" do |ansible|
+      ansible.playbook = "devops/site.yml"
+#      ansible.inventory_file = "develops/hosts"
+      ansible.hosts = "sfserver"
+      ansible.verbose = "true"
+      ansible.verbosity = "-vvv"
+    end
+  end
+end

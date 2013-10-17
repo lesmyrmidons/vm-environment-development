@@ -1,0 +1,37 @@
+##
+# Ansible playbook for setting up a LAMP development server on Ubuntu 12.04.
+#
+
+---
+- hosts: sfserver
+  user: vagrant
+  sudo: yes
+
+#  vars_files:
+#    - settings.yml
+
+  tasks:
+    - name: update apt cache
+      apt: update_cache=yes
+
+    - name: upgrade
+      apt: upgrade=dist
+    ##
+    # Apt package installation of required software.
+    #
+    - name: General | Install required packages.
+      action: apt pkg=$item state=installed
+      with_items:
+        - php5
+        - apache2
+        - php-pear
+        - php5-ldap
+        - php5-curl
+        - php5-intl
+        - php5-cli
+        - php5-xdebug
+      notify: Restart Apache
+
+  handlers:
+    - name: Restart Apache
+      action: service name=apache2 state=restarted

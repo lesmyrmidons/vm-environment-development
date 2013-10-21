@@ -7,8 +7,11 @@
   user: vagrant
   sudo: yes
 
-#  vars_files:
-#    - settings.yml
+  vars_files:
+    - group_vars/all.yml
+
+  roles:
+    - common
 
   tasks:
     - name: update apt cache

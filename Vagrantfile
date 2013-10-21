@@ -9,9 +9,10 @@ Vagrant::Config.run do |config|
     sf_config.vm.share_folder("v-root", "/vagrant", ".", :nfs => true) # Update the path to set your folder
 
     sf_config.vm.provision "ansible" do |ansible|
-      ansible.playbook = "devops/site.yml"
       ansible.inventory_path = "devops/hosts"
-      ansible.verbose = "-vvvv"
+      ansible.playbook = "devops/site.yml"
+#      ansible.hosts = "sfserver"
+      ansible.verbose = "-vvv"
     end
   end
 end

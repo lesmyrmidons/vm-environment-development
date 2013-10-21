@@ -3,10 +3,11 @@ vm-environment-development
 
 Automating the installation of VM and mandatory packages for a Web application.
 
-Installation
+Requirements
 ============
 
-Download sources from [here](https://github.com/lesmyrmidons/vm-environment-development/archive/master.zip).
+* Vagrant >=1.3.5
+* Ansible >=1.3.3
 
 Run
 ===

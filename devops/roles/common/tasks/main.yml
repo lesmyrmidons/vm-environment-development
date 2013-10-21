@@ -13,3 +13,10 @@
 - name: Start the ntp service
   service: name=ntp state=started enabled=true
   tags: ntp
+
+- name: Install lists packages
+  action: apt pkg=$item state=installed
+  with_items:
+    - vim
+    - git
+    - zsh

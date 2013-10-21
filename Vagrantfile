@@ -9,11 +9,10 @@ Vagrant::Config.run do |config|
     sf_config.vm.share_folder("v-root", "/vagrant", ".", :nfs => true)
 
     sf_config.vm.provision "ansible" do |ansible|
+      ansible.inventory_path = "devops/hosts"
       ansible.playbook = "devops/site.yml"
-#      ansible.inventory_file = "develops/hosts"
-      ansible.hosts = "sfserver"
-      ansible.verbose = "true"
-      ansible.verbosity = "-vvv"
+#      ansible.hosts = "sfserver"
+      ansible.verbose = "-vvv"
     end
   end
 end

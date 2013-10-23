@@ -1,0 +1,6 @@
+module MyVars
+
+    SFVMNAME = "symfony2-debian-7.1"
+    PATHSHAREFOLDER = "."
+
+end

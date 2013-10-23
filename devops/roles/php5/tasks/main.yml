@@ -1,0 +1,13 @@
+---
+
+- name: PHP5 | Install required packages.
+  action: apt pkg=$item state=installed
+  with_items:
+    - php5
+    - php-pear
+    - php5-ldap
+    - php5-curl
+    - php5-intl
+    - php5-cli
+    - php5-xdebug
+  notify: Restart Apache

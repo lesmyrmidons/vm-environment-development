@@ -14,6 +14,12 @@
   service: name=ntp state=started enabled=true
   tags: ntp
 
+- name: Update apt cache
+  apt: update_cache=yes
+
+- name: Upgrade debian
+  apt: upgrade=dist
+
 - name: Install lists packages
   action: apt pkg=$item state=installed
   with_items:

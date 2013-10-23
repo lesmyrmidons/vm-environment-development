@@ -9,21 +9,25 @@ Requirements
 * Vagrant >=1.3.5
 * Ansible >=1.3.3
 
-Run
----
+Configuration
+-------------
 
-For run VM and execute ansible for install all package :
+Download and move to folder:
 
 ```bash
 $ cd /path/vm-environment-development
 ```
-
-Copy the file 'parameters.rb.dist' to 'parameters.rb'
+Copy the file `parameters.rb.dist` to `parameters.rb`:
 
 ```bash
 $ cp parameters.rb.dist parameters.rb
 ```
-And run vagrant :
+Change the file `parameters.rb` as desired.
+
+Run
+---
+
+For run VM and execute ansible for install all package:
 
 ```bash
 $ vagrant up --provision

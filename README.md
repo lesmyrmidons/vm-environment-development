@@ -16,6 +16,16 @@ For run VM and execute ansible for install all package :
 
 ```bash
 $ cd /path/vm-environment-development
+```
+
+Copy the file 'parameters.rb.dist' to 'parameters.rb'
+
+```bash
+$ cp parameters.rb.dist parameters.rb
+```
+And run vagrant :
+
+```bash
 $ vagrant up --provision
 ```
 

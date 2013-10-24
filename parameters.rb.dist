@@ -1,6 +1,7 @@
 module MyVars
 
-    SFVMNAME = "symfony2-debian-7.1"
-    PATHSHAREFOLDER = "."
+    SF_VM_NAME = "symfony2-debian-7.1"
+    PATH_SHARE_FOLDER = "."
+    ANSIBLE_VERBOSE = "-vvv"
 
 end

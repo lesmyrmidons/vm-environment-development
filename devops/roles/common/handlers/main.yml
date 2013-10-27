@@ -3,4 +3,4 @@
 # See http://ansible.cc/docs/playbooks.html for more information about handlers.
 
 - name: restart ntp
-  service: name=ntpd state=restart
+  service: name=ntp state=restarted

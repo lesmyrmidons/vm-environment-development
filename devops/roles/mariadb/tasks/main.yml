@@ -9,3 +9,7 @@
 
 - name: MariaDB | Install Packages
   apt: pkg=mariadb-server
+
+- name: MariaDB | Install Phpmyadmin
+  apt: pkg=phpmyadmin
+  notify: Restart Apache

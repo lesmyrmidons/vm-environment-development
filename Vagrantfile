@@ -12,6 +12,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     sf_config.vm.network :"private_network", ip: "192.168.40.10"
     sf_config.vm.synced_folder PATH_SHARE_FOLDER, PATH_MOUNT_FOLDER, :nfs => true
 
+    config.vm.provider :virtualbox do |v|
+      v.name = SF_VM_NAME
+    end
+
     sf_config.vm.provision :ansible do |ansible|
       ansible.inventory_path = "devops/hosts"
       ansible.playbook = "devops/site.yml"

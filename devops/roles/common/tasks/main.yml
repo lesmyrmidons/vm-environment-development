@@ -8,7 +8,7 @@
 - name: Configure ntp file
   template: src=ntp.conf.j2 dest=/etc/ntp.conf
   tags: ntp
-  notify: restarted ntp
+  notify: restart ntp
 
 - name: Start the ntp service
   service: name=ntp state=started enabled=true

@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # sf_config.vm.hostname = SF_VM_NAME
     sf_config.vm.box_url = "http://downloads.shadoware.org/wheezy64.box"
     sf_config.vm.network :"private_network", ip: "192.168.40.10"
-    sf_config.vm.share_folder("vagrant-root", "/data", PATH_SHARE_FOLDER, :nfs => true)
+    sf_config.vm.synced_folder(PATH_SHARE_FOLDER, "/data", :nfs => true)
 
     sf_config.vm.provision "ansible" do |ansible|
       ansible.inventory_path = "devops/hosts"

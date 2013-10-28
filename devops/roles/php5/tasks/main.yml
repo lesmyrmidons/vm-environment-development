@@ -10,6 +10,7 @@
     - php5-intl
     - php5-cli
     - php5-xdebug
+<<<<<<< HEAD
   tags: php5
   notify: Restart apache
 
@@ -20,3 +21,14 @@
 - name: PHP5 | Configuration /etc/php5/cli/php.ini
   template: src=etc-php5-cli-php-ini.j2 dest=/etc/php5/cli/php.ini
   notify: Restart apache
+=======
+  notify: Restart Apache
+
+- name: PHP5 | Configuration /etc/php5/apache2/php.ini
+  action: template src=templates/etc-php5-apache2-php-ini.j2 dest=/etc/php5/apache2/php.ini
+  notify: Restart Apache
+
+- name: PHP5 | Configuration /etc/php5/cli/php.ini
+  action: template src=templates/etc-php5-cli-php-ini.j2 dest=/etc/php5/cli/php.ini
+  notify: Restart Apache
+>>>>>>> Customized conf for PHP

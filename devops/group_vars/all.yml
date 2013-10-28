@@ -3,3 +3,6 @@
 
 httpd_port: 80
 ntpserver: '0.fr.pool.ntp.org'
+
+# Settings for PHP (/etc/php5/apache2/php.ini)
+php_date_timezone: 'Europe/Paris'

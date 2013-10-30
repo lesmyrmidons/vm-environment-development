@@ -4,3 +4,6 @@
 ntpserver: '0.fr.pool.ntp.org'
 web:
   httpd_port: 80
+
+mariadb:
+  root_password: dev

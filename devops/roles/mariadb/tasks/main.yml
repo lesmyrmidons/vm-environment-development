@@ -8,8 +8,14 @@
   apt_repository: repo='deb http://mirrors.linsrv.net/mariadb/repo/5.5/debian wheezy main' update_cache=yes
 
 - name: MariaDB | Install Packages
-  apt: pkg=mariadb-server
+  apt: pkg=mariadb-server,python-mysqldb
+
+- name: MariaDB | Set root password 
+  mysql_user: name=root host=localhost password=$root_password
 
 - name: MariaDB | Install Phpmyadmin
   apt: pkg=phpmyadmin
   notify: Restart Apache
+
+- name: MariaDB | Add symlink for phpmyadmin
+  command: ln -s /usr/share/phpmyadmin /var/www/phpmyadmin

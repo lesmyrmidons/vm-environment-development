@@ -1,11 +1,7 @@
 ---
 
 - name: Ajenti | Download keys authenticity
-  shell: wget http://repo.ajenti.org/debian/key -O- > ajenti.key
-  tags: ajenti
-
-- name: Ajenti | Add keys authenticity
-  command: apt-key add ajenti.key
+  shell: wget http://repo.ajenti.org/debian/key -O- | sudo apt-key add -
   tags: ajenti
 
 - name: Ajenti | Add source sources

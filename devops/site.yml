@@ -3,7 +3,7 @@
 #
 
 ---
-- hosts: sfserver
+- hosts: all
   user: vagrant
   sudo: yes
 
@@ -12,7 +12,18 @@
 
   roles:
     - common
+
+- hosts: sfserver
+  user: vagrant
+  sudo: yes
+
+  vars_files:
+    - group_vars/all.yml
+
+  roles:
     - mongodb
     - web
     - php5
-    - mariadb
+#    - mariadb
+    - composer
+    - ajenti

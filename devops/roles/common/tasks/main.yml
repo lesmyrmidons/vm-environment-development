@@ -27,4 +27,5 @@
     - git
     - zsh
     - curl
+    - wget
     - python-software-properties                 # for example use "apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db"

@@ -1,0 +1,17 @@
+---
+
+- name: Ajenti | Download keys authenticity
+  shell: wget http://repo.ajenti.org/debian/key -O- > ajenti.key
+  tags: ajenti
+
+- name: Ajenti | Add keys authenticity
+  command: apt-key add ajenti.key
+  tags: ajenti
+
+- name: Ajenti | Add source sources
+  apt_repository: repo='deb http://repo.ajenti.org/ng/debian main main' update_cache=yes 
+  tags: ajenti
+
+- name: Ajenti | Install Packages
+  apt: pkg=ajenti state=installed
+  tags: ajenti

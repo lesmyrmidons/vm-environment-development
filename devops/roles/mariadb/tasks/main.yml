@@ -2,7 +2,7 @@
 # This role deploys the MariaDB processes and sets up settings.
 
 - name: MariaDB | Add keys authenticity
-  apt_key: url=http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xCBCB082A1BB943DB
+  apt_key: url={{ url_apt_key }}0xCBCB082A1BB943DB
 
 - name: MariaDB | Add source sources
   apt_repository: repo='deb http://mirrors.linsrv.net/mariadb/repo/5.5/debian wheezy main' update_cache=yes
@@ -12,10 +12,3 @@
 
 - name: MariaDB | Set root password 
   mysql_user: name=root host=localhost password=$root_password
-
-- name: MariaDB | Install Phpmyadmin
-  apt: pkg=phpmyadmin
-  notify: Restart Apache
-
-- name: MariaDB | Add symlink for phpmyadmin
-  command: ln -s /usr/share/phpmyadmin /var/www/phpmyadmin

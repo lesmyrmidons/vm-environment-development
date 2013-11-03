@@ -6,8 +6,8 @@ Automating the installation of VM and mandatory packages for a Web application.
 Requirements
 ------------
 
-* Vagrant >=1.3.5
-* Ansible >=1.3.3
+* [Vagrant >=1.3.5](docs/vagrant-install.md)
+* [Ansible >=1.3.3](docs/ansible-install.md)
 
 Configuration
 -------------
@@ -32,4 +32,14 @@ For run VM and execute ansible for install all package:
 ```bash
 $ vagrant up --provision
 ```
+
+Installed application
+---------------------
+
+* Ajenti (Web administration server)
+* Mariadb (equal mysql)
+* MongoDB (No-SQL)
+* PHP5 (PHP 5.4.x)
+* Phpmyadmin (To administration database)
+* git
 

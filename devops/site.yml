@@ -24,6 +24,6 @@
     - mongodb
     - web
     - php5
-#    - mariadb
+    - mariadb
     - composer
     - ajenti

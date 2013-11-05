@@ -2,10 +2,16 @@
 # This role deploys the MariaDB processes and sets up settings.
 
 - name: MariaDB | Add keys authenticity
-  apt_key: url=http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xCBCB082A1BB943DB
+  apt_key: url={{ url_apt_key }}0xcbcb082a1bb943db state=present
 
 - name: MariaDB | Add source sources
-  apt_repository: repo='deb http://mirrors.linsrv.net/mariadb/repo/5.5/debian wheezy main' update_cache=yes
+  apt_repository: repo='deb http://ftp.igh.cnrs.fr/pub/mariadb/repo/10.0/debian wheezy main' update_cache=yes
 
 - name: MariaDB | Install Packages
-  apt: pkg=mariadb-server
+  apt: pkg=mariadb-server,python-mysqldb state=installed
+
+- name: MariaDB | Set root password
+  mysql_user: name=root host=localhost password={{ mariadb.root_password }}
+
+- name: copy .my.cnf file with root password credentials
+  template: src=.my.cnf dest=~/.my.cnf owner=vagrant mode=0600

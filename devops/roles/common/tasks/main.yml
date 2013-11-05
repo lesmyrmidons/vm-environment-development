@@ -8,7 +8,7 @@
 - name: Configure ntp file
   template: src=ntp.conf.j2 dest=/etc/ntp.conf
   tags: ntp
-  notify: restarted ntp
+  notify: restart ntp
 
 - name: Start the ntp service
   service: name=ntp state=started enabled=true
@@ -26,4 +26,6 @@
     - vim
     - git
     - zsh
+    - curl
+    - wget
     - python-software-properties                 # for example use "apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db"

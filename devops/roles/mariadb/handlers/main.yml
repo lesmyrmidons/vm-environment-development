@@ -1,0 +1,10 @@
+---
+
+- name: start mariadb
+  service: name=mysql state=started
+
+- name: stop mariadb
+  service: name=mysql state=stoped
+
+- name: restart mariadb
+  service: name=mysql state=restarted

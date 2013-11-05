@@ -1,8 +1,18 @@
 ---
 # Variables listed here are applicable to all host groups
 
-httpd_port: 80
+url_apt_key: "http://keyserver.ubuntu.com/pks/lookup?op=get&search="
+
 ntpserver: '0.fr.pool.ntp.org'
 
 # Settings for PHP (/etc/php5/apache2/php.ini)
 php_date_timezone: 'Europe/Paris'
+
+web:
+  httpd_port: 80
+  domain: dev.test-deploy.com
+  project_path: /data/dev.test-deploy.com
+  directory_index: app.php
+
+mariadb:
+  root_password: dev

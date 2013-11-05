@@ -5,11 +5,13 @@ url_apt_key: "http://keyserver.ubuntu.com/pks/lookup?op=get&search="
 
 ntpserver: '0.fr.pool.ntp.org'
 
-<<<<<<< HEAD
+# Settings for PHP (/etc/php5/apache2/php.ini)
+php_date_timezone: 'Europe/Paris'
+
 web:
   httpd_port: 80
-  domain: dev.project.com
-  project_path: /data/dev.project.com
+  domain: dev.test-deploy.com
+  project_path: /data/dev.test-deploy.com
   directory_index: app.php
 
 php5:
@@ -17,7 +19,3 @@ php5:
 
 mariadb:
   root_password: dev
-=======
-# Settings for PHP (/etc/php5/apache2/php.ini)
-php_date_timezone: 'Europe/Paris'
->>>>>>> Customized conf for PHP

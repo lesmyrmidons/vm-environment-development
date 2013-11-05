@@ -14,4 +14,4 @@
   mysql_user: name=root host=localhost password={{ mariadb.root_password }}
 
 - name: copy .my.cnf file with root password credentials
-  template: src=.my.cnf dest=~/.my.cnf owner=vagrant mode=0600
+  template: src=.my.cnf dest=/home/vagrant/.my.cnf owner=vagrant mode=0600

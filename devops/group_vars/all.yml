@@ -7,9 +7,12 @@ ntpserver: '0.fr.pool.ntp.org'
 
 web:
   httpd_port: 80
-  domain: dev.test-deploy.com
-  project_path: /data/dev.test-deploy.com
+  domain: dev.project.com
+  project_path: /data/dev.project.com
   directory_index: app.php
+
+php5:
+  php_date_timezone: 'Europe/Paris'
 
 mariadb:
   root_password: dev

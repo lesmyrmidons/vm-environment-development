@@ -11,4 +11,12 @@
     - php5-cli
     - php5-xdebug
   tags: php5
+  notify: Restart Apache
+
+- name: PHP5 | Configuration /etc/php5/apache2/php.ini
+  template: src=etc-php5-apache2-php-ini.j2 dest=/etc/php5/apache2/php.ini
+  notify: Restart apache
+
+- name: PHP5 | Configuration /etc/php5/cli/php.ini
+  template: src=etc-php5-cli-php-ini.j2 dest=/etc/php5/cli/php.ini
   notify: Restart apache

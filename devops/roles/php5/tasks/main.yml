@@ -10,18 +10,13 @@
     - php5-intl
     - php5-cli
     - php5-xdebug
-<<<<<<< Updated upstream
-  notify: Restart Apache
-=======
     - php5-dev
   tags: php5
-  notify: Restart apache
->>>>>>> Stashed changes
+  notify: Restart Apache
 
 - name: PHP5 | Install PHP 5 Mongo Module
-  action: pecl pkg=$item state=installed
-  with_items:
-    - mongo
+  shell: pecl install mongo
+  tags: php5
 
 - name: PHP5 | Configuration /etc/php5/apache2/php.ini
   #action: template src=templates/etc-php5-apache2-php-ini.j2 dest=/etc/php5/apache2/php.ini

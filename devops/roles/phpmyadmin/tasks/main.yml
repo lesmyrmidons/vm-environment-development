@@ -2,7 +2,7 @@
 
 - name: Phpmyadmin | Install Phpmyadmin
   apt: pkg=phpmyadmin
-  notify: Restart Apache
+  notify: Restart apache
 
 - name: Phpmyadmin | Add symlink for phpmyadmin
   command: ln -s /usr/share/phpmyadmin /var/www/phpmyadmin

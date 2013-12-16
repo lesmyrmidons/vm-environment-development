@@ -1,7 +1,11 @@
 [PHP]
 
 ;;;;;;;;;;;;;;;;;;;
+<<<<<<< HEAD
 ; About php.ini ;
+=======
+; About php.ini   ;
+>>>>>>> Merge
 ;;;;;;;;;;;;;;;;;;;
 ; PHP's initialization file, generally called php.ini, is responsible for
 ; configuring many of the aspects of PHP's behavior.
@@ -19,15 +23,25 @@
 ; See the PHP docs for more specific information.
 ; http://php.net/configuration.file
 
+<<<<<<< HEAD
 ; The syntax of the file is extremely simple. Whitespace and lines
+=======
+; The syntax of the file is extremely simple.  Whitespace and lines
+>>>>>>> Merge
 ; beginning with a semicolon are silently ignored (as you probably guessed).
 ; Section headers (e.g. [Foo]) are also silently ignored, even though
 ; they might mean something in the future.
 
 ; Directives following the section heading [PATH=/www/mysite] only
+<<<<<<< HEAD
 ; apply to PHP files in the /www/mysite directory. Directives
 ; following the section heading [HOST=www.example.com] only apply to
 ; PHP files served from www.example.com. Directives set in these
+=======
+; apply to PHP files in the /www/mysite directory.  Directives
+; following the section heading [HOST=www.example.com] only apply to
+; PHP files served from www.example.com.  Directives set in these
+>>>>>>> Merge
 ; special sections cannot be overridden by user-defined INI files or
 ; at runtime. Currently, [PATH=] and [HOST=] sections only work under
 ; CGI/FastCGI.
@@ -37,7 +51,11 @@
 ; directive = value
 ; Directive names are *case sensitive* - foo=bar is different from FOO=bar.
 ; Directives are variables used to configure PHP or PHP extensions.
+<<<<<<< HEAD
 ; There is no name validation. If PHP can't find an expected
+=======
+; There is no name validation.  If PHP can't find an expected
+>>>>>>> Merge
 ; directive because it is not set or is mistyped, a default value will be used.
 
 ; The value can be a string, a number, a PHP constant (e.g. E_ALL or M_PI), one
@@ -46,11 +64,19 @@
 ; previously set variable or directive (e.g. ${foo})
 
 ; Expressions in the INI file are limited to bitwise operators and parentheses:
+<<<<<<< HEAD
 ; | bitwise OR
 ; ^ bitwise XOR
 ; & bitwise AND
 ; ~ bitwise NOT
 ; ! boolean NOT
+=======
+; |  bitwise OR
+; ^  bitwise XOR
+; &  bitwise AND
+; ~  bitwise NOT
+; !  boolean NOT
+>>>>>>> Merge
 
 ; Boolean flags can be turned on using the values 1, On, True or Yes.
 ; They can be turned off using the values 0, Off, False or No.
@@ -58,9 +84,15 @@
 ; An empty string can be denoted by simply not writing anything after the equal
 ; sign, or by using the None keyword:
 
+<<<<<<< HEAD
 ; foo = ; sets foo to an empty string
 ; foo = None ; sets foo to an empty string
 ; foo = "None" ; sets foo to the string 'None'
+=======
+;  foo =         ; sets foo to an empty string
+;  foo = None    ; sets foo to an empty string
+;  foo = "None"  ; sets foo to the string 'None'
+>>>>>>> Merge
 
 ; If you use constants in your value, and these constants belong to a
 ; dynamically loaded extension (either a PHP extension or a Zend extension),
@@ -94,6 +126,7 @@
 ; we recommend these changes in PHP's behavior.
 
 ; display_errors
+<<<<<<< HEAD
 ; Default Value: On
 ; Development Value: On
 ; Production Value: Off
@@ -180,6 +213,94 @@
 
 ;;;;;;;;;;;;;;;;;;;;
 ; php.ini Options ;
+=======
+;   Default Value: On
+;   Development Value: On
+;   Production Value: Off
+
+; display_startup_errors
+;   Default Value: Off
+;   Development Value: On
+;   Production Value: Off
+
+; error_reporting
+;   Default Value: E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED
+;   Development Value: E_ALL
+;   Production Value: E_ALL & ~E_DEPRECATED & ~E_STRICT
+
+; html_errors
+;   Default Value: On
+;   Development Value: On
+;   Production value: On
+
+; log_errors
+;   Default Value: Off
+;   Development Value: On
+;   Production Value: On
+
+; max_input_time
+;   Default Value: -1 (Unlimited)
+;   Development Value: 60 (60 seconds)
+;   Production Value: 60 (60 seconds)
+
+; output_buffering
+;   Default Value: Off
+;   Development Value: 4096
+;   Production Value: 4096
+
+; register_argc_argv
+;   Default Value: On
+;   Development Value: Off
+;   Production Value: Off
+
+; request_order
+;   Default Value: None
+;   Development Value: "GP"
+;   Production Value: "GP"
+
+; session.bug_compat_42
+;   Default Value: On
+;   Development Value: On
+;   Production Value: Off
+
+; session.bug_compat_warn
+;   Default Value: On
+;   Development Value: On
+;   Production Value: Off
+
+; session.gc_divisor
+;   Default Value: 100
+;   Development Value: 1000
+;   Production Value: 1000
+
+; session.hash_bits_per_character
+;   Default Value: 4
+;   Development Value: 5
+;   Production Value: 5
+
+; short_open_tag
+;   Default Value: On
+;   Development Value: Off
+;   Production Value: Off
+
+; track_errors
+;   Default Value: Off
+;   Development Value: On
+;   Production Value: Off
+
+; url_rewriter.tags
+;   Default Value: "a=href,area=href,frame=src,form=,fieldset="
+;   Development Value: "a=href,area=href,frame=src,input=src,form=fakeentry"
+;   Production Value: "a=href,area=href,frame=src,input=src,form=fakeentry"
+
+; variables_order
+;   Default Value: "EGPCS"
+;   Development Value: "GPCS"
+;   Production Value: "GPCS"
+
+;;;;;;;;;;;;;;;;;;;;
+; php.ini Options  ;
+>>>>>>> Merge
 ;;;;;;;;;;;;;;;;;;;;
 ; Name for user-defined php.ini (.htaccess) files. Default is ".user.ini"
 ;user_ini.filename = ".user.ini"
@@ -232,11 +353,19 @@ precision = 14
 ; as it gets it. On production servers, 4096 bytes is a good setting for performance
 ; reasons.
 ; Note: Output buffering can also be controlled via Output Buffering Control
+<<<<<<< HEAD
 ; functions.
 ; Possible Values:
 ; On = Enabled and buffer is unlimited. (Use with caution)
 ; Off = Disabled
 ; Integer = Enables the buffer and sets its maximum size in bytes.
+=======
+;   functions.
+; Possible Values:
+;   On = Enabled and buffer is unlimited. (Use with caution)
+;   Off = Disabled
+;   Integer = Enables the buffer and sets its maximum size in bytes.
+>>>>>>> Merge
 ; Note: This directive is hardcoded to Off for the CLI SAPI
 ; Default Value: Off
 ; Development Value: 4096
@@ -244,11 +373,16 @@ precision = 14
 ; http://php.net/output-buffering
 output_buffering = 4096
 
+<<<<<<< HEAD
 ; You can redirect all of the output of your scripts to a function. For
+=======
+; You can redirect all of the output of your scripts to a function.  For
+>>>>>>> Merge
 ; example, if you set output_handler to "mb_output_handler", character
 ; encoding will be transparently converted to the specified encoding.
 ; Setting any output handler automatically turns on output buffering.
 ; Note: People who wrote portable scripts should not depend on this ini
+<<<<<<< HEAD
 ; directive. Instead, explicitly set the output handler using ob_start().
 ; Using this ini directive may cause problems unless you know what script
 ; is doing.
@@ -256,6 +390,15 @@ output_buffering = 4096
 ; and you cannot use both "ob_gzhandler" and "zlib.output_compression".
 ; Note: output_handler must be empty if this is set 'On' !!!!
 ; Instead you must use zlib.output_handler.
+=======
+;   directive. Instead, explicitly set the output handler using ob_start().
+;   Using this ini directive may cause problems unless you know what script
+;   is doing.
+; Note: You cannot use both "mb_output_handler" with "ob_iconv_handler"
+;   and you cannot use both "ob_gzhandler" and "zlib.output_compression".
+; Note: output_handler must be empty if this is set 'On' !!!!
+;   Instead you must use zlib.output_handler.
+>>>>>>> Merge
 ; http://php.net/output-handler
 ;output_handler =
 
@@ -263,11 +406,19 @@ output_buffering = 4096
 ; Valid values for this option are 'off', 'on', or a specific buffer size
 ; to be used for compression (default is 4KB)
 ; Note: Resulting chunk size may vary due to nature of compression. PHP
+<<<<<<< HEAD
 ; outputs chunks that are few hundreds bytes each as a result of
 ; compression. If you prefer a larger chunk size for better
 ; performance, enable output_buffering in addition.
 ; Note: You need to use zlib.output_handler instead of the standard
 ; output_handler, or otherwise the output will be corrupted.
+=======
+;   outputs chunks that are few hundreds bytes each as a result of
+;   compression. If you prefer a larger chunk size for better
+;   performance, enable output_buffering in addition.
+; Note: You need to use zlib.output_handler instead of the standard
+;   output_handler, or otherwise the output will be corrupted.
+>>>>>>> Merge
 ; http://php.net/zlib.output-compression
 zlib.output_compression = Off
 
@@ -281,9 +432,15 @@ zlib.output_compression = Off
 ;zlib.output_handler =
 
 ; Implicit flush tells PHP to tell the output layer to flush itself
+<<<<<<< HEAD
 ; automatically after every output block. This is equivalent to calling the
 ; PHP function flush() after each and every call to print() or echo() and each
 ; and every HTML block. Turning this option on has serious performance
+=======
+; automatically after every output block.  This is equivalent to calling the
+; PHP function flush() after each and every call to print() or echo() and each
+; and every HTML block.  Turning this option on has serious performance
+>>>>>>> Merge
 ; implications and is generally recommended for debugging purposes only.
 ; http://php.net/implicit-flush
 ; Note: This directive is hardcoded to On for the CLI SAPI
@@ -303,7 +460,11 @@ unserialize_callback_func =
 serialize_precision = 17
 
 ; open_basedir, if set, limits all file operations to the defined directory
+<<<<<<< HEAD
 ; and below. This directive makes most sense if used in a per-directory
+=======
+; and below.  This directive makes most sense if used in a per-directory
+>>>>>>> Merge
 ; or per-virtualhost web server configuration file. This directive is
 ; *NOT* affected by whether Safe Mode is turned On or Off.
 ; http://php.net/open-basedir
@@ -321,6 +482,7 @@ disable_functions =
 ; http://php.net/disable-classes
 disable_classes =
 
+<<<<<<< HEAD
 ; Colors for Syntax Highlighting mode. Anything that's acceptable in
 ; <span style="color: ???????"> would work.
 ; http://php.net/syntax-highlighting
@@ -329,6 +491,16 @@ disable_classes =
 ;highlight.keyword = #007700
 ;highlight.default = #0000BB
 ;highlight.html = #000000
+=======
+; Colors for Syntax Highlighting mode.  Anything that's acceptable in
+; <span style="color: ???????"> would work.
+; http://php.net/syntax-highlighting
+;highlight.string  = #DD0000
+;highlight.comment = #FF9900
+;highlight.keyword = #007700
+;highlight.default = #0000BB
+;highlight.html    = #000000
+>>>>>>> Merge
 
 ; If enabled, the request will be allowed to complete even if the user aborts
 ; the request. Consider enabling it if executing long requests, which may end up
@@ -354,12 +526,21 @@ disable_classes =
 zend.enable_gc = On
 
 ; If enabled, scripts may be written in encodings that are incompatible with
+<<<<<<< HEAD
 ; the scanner. CP936, Big5, CP949 and Shift_JIS are the examples of such
 ; encodings. To use this feature, mbstring extension must be enabled.
 ; Default: Off
 ;zend.multibyte = Off
 
 ; Allows to set the default encoding for the scripts. This value will be used
+=======
+; the scanner.  CP936, Big5, CP949 and Shift_JIS are the examples of such
+; encodings.  To use this feature, mbstring extension must be enabled.
+; Default: Off
+;zend.multibyte = Off
+
+; Allows to set the default encoding for the scripts.  This value will be used
+>>>>>>> Merge
 ; unless "declare(encoding=...)" directive appears at the top of the script.
 ; Only affects if zend.multibyte is set.
 ; Default: ""
@@ -370,7 +551,11 @@ zend.enable_gc = On
 ;;;;;;;;;;;;;;;;;
 
 ; Decides whether PHP may expose the fact that it is installed on the server
+<<<<<<< HEAD
 ; (e.g. by adding its signature to the Web server header). It is no security
+=======
+; (e.g. by adding its signature to the Web server header).  It is no security
+>>>>>>> Merge
 ; threat in any way, but it makes it possible to determine whether you use PHP
 ; on your server or not.
 ; http://php.net/expose-php
@@ -426,6 +611,7 @@ memory_limit = -1
 ; development and early testing.
 ;
 ; Error Level Constants:
+<<<<<<< HEAD
 ; E_ALL - All errors and warnings (includes E_STRICT as of PHP 5.4.0)
 ; E_ERROR - fatal run-time errors
 ; E_RECOVERABLE_ERROR - almost fatal run-time errors
@@ -456,6 +642,38 @@ memory_limit = -1
 ; E_ALL & ~E_NOTICE (Show all errors, except for notices)
 ; E_ALL & ~E_NOTICE & ~E_STRICT (Show all errors, except for notices and coding standards warnings.)
 ; E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR (Show only errors)
+=======
+; E_ALL             - All errors and warnings (includes E_STRICT as of PHP 5.4.0)
+; E_ERROR           - fatal run-time errors
+; E_RECOVERABLE_ERROR  - almost fatal run-time errors
+; E_WARNING         - run-time warnings (non-fatal errors)
+; E_PARSE           - compile-time parse errors
+; E_NOTICE          - run-time notices (these are warnings which often result
+;                     from a bug in your code, but it's possible that it was
+;                     intentional (e.g., using an uninitialized variable and
+;                     relying on the fact it's automatically initialized to an
+;                     empty string)
+; E_STRICT          - run-time notices, enable to have PHP suggest changes
+;                     to your code which will ensure the best interoperability
+;                     and forward compatibility of your code
+; E_CORE_ERROR      - fatal errors that occur during PHP's initial startup
+; E_CORE_WARNING    - warnings (non-fatal errors) that occur during PHP's
+;                     initial startup
+; E_COMPILE_ERROR   - fatal compile-time errors
+; E_COMPILE_WARNING - compile-time warnings (non-fatal errors)
+; E_USER_ERROR      - user-generated error message
+; E_USER_WARNING    - user-generated warning message
+; E_USER_NOTICE     - user-generated notice message
+; E_DEPRECATED      - warn about code that will not work in future versions
+;                     of PHP
+; E_USER_DEPRECATED - user-generated deprecation warnings
+;
+; Common Values:
+;   E_ALL (Show all errors, warnings and notices including coding standards.)
+;   E_ALL & ~E_NOTICE  (Show all errors, except for notices)
+;   E_ALL & ~E_NOTICE & ~E_STRICT  (Show all errors, except for notices and coding standards warnings.)
+;   E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR  (Show only errors)
+>>>>>>> Merge
 ; Default Value: E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED
 ; Development Value: E_ALL
 ; Production Value: E_ALL & ~E_DEPRECATED & ~E_STRICT
@@ -470,9 +688,15 @@ error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
 ; It's recommended that errors be logged on production servers rather than
 ; having the errors sent to STDOUT.
 ; Possible Values:
+<<<<<<< HEAD
 ; Off = Do not display any errors
 ; stderr = Display errors to STDERR (affects only CGI/CLI binaries!)
 ; On or stdout = Display errors to STDOUT
+=======
+;   Off = Do not display any errors
+;   stderr = Display errors to STDERR (affects only CGI/CLI binaries!)
+;   On or stdout = Display errors to STDOUT
+>>>>>>> Merge
 ; Default Value: On
 ; Development Value: On
 ; Production Value: Off
@@ -682,7 +906,11 @@ auto_prepend_file =
 auto_append_file =
 
 ; By default, PHP will output a character encoding using
+<<<<<<< HEAD
 ; the Content-type: header. To disable sending of the charset, simply
+=======
+; the Content-type: header.  To disable sending of the charset, simply
+>>>>>>> Merge
 ; set it to be empty.
 ;
 ; PHP's built-in default is text/html
@@ -715,7 +943,11 @@ default_mimetype = "text/html"
 ; The root of the PHP pages, used only if nonempty.
 ; if PHP was not compiled with FORCE_REDIRECT, you SHOULD set doc_root
 ; if you are running php as a CGI under any web server (other than IIS)
+<<<<<<< HEAD
 ; see documentation for security issues. The alternate is to use the
+=======
+; see documentation for security issues.  The alternate is to use the
+>>>>>>> Merge
 ; cgi.force_redirect configuration below
 ; http://php.net/doc-root
 doc_root =
@@ -731,14 +963,22 @@ user_dir =
 ; On windows:
 ; extension_dir = "ext"
 
+<<<<<<< HEAD
 ; Whether or not to enable the dl() function. The dl() function does NOT work
+=======
+; Whether or not to enable the dl() function.  The dl() function does NOT work
+>>>>>>> Merge
 ; properly in multithreaded servers, such as IIS or Zeus, and is automatically
 ; disabled on them.
 ; http://php.net/enable-dl
 enable_dl = Off
 
 ; cgi.force_redirect is necessary to provide security running PHP as a CGI under
+<<<<<<< HEAD
 ; most web servers. Left undefined, PHP turns this on by default. You can
+=======
+; most web servers.  Left undefined, PHP turns this on by default.  You can
+>>>>>>> Merge
 ; turn it off here AT YOUR OWN RISK
 ; **You CAN safely turn this off for IIS, in fact, you MUST.**
 ; http://php.net/cgi.force-redirect
@@ -750,25 +990,44 @@ enable_dl = Off
 
 ; if cgi.force_redirect is turned on, and you are not running under Apache or Netscape
 ; (iPlanet) web servers, you MAY need to set an environment variable name that PHP
+<<<<<<< HEAD
 ; will look for to know it is OK to continue execution. Setting this variable MAY
+=======
+; will look for to know it is OK to continue execution.  Setting this variable MAY
+>>>>>>> Merge
 ; cause security issues, KNOW WHAT YOU ARE DOING FIRST.
 ; http://php.net/cgi.redirect-status-env
 ;cgi.redirect_status_env = ;
 
+<<<<<<< HEAD
 ; cgi.fix_pathinfo provides *real* PATH_INFO/PATH_TRANSLATED support for CGI. PHP's
 ; previous behaviour was to set PATH_TRANSLATED to SCRIPT_FILENAME, and to not grok
 ; what PATH_INFO is. For more information on PATH_INFO, see the cgi specs. Setting
 ; this to 1 will cause PHP CGI to fix its paths to conform to the spec. A setting
 ; of zero causes PHP to behave as before. Default is 1. You should fix your scripts
+=======
+; cgi.fix_pathinfo provides *real* PATH_INFO/PATH_TRANSLATED support for CGI.  PHP's
+; previous behaviour was to set PATH_TRANSLATED to SCRIPT_FILENAME, and to not grok
+; what PATH_INFO is.  For more information on PATH_INFO, see the cgi specs.  Setting
+; this to 1 will cause PHP CGI to fix its paths to conform to the spec.  A setting
+; of zero causes PHP to behave as before.  Default is 1.  You should fix your scripts
+>>>>>>> Merge
 ; to use SCRIPT_FILENAME rather than PATH_TRANSLATED.
 ; http://php.net/cgi.fix-pathinfo
 ;cgi.fix_pathinfo=1
 
 ; FastCGI under IIS (on WINNT based OS) supports the ability to impersonate
+<<<<<<< HEAD
 ; security tokens of the calling client. This allows IIS to define the
 ; security context that the request runs under. mod_fastcgi under Apache
 ; does not currently support this feature (03/17/2002)
 ; Set to 1 if running under IIS. Default is zero.
+=======
+; security tokens of the calling client.  This allows IIS to define the
+; security context that the request runs under.  mod_fastcgi under Apache
+; does not currently support this feature (03/17/2002)
+; Set to 1 if running under IIS.  Default is zero.
+>>>>>>> Merge
 ; http://php.net/fastcgi.impersonate
 ;fastcgi.impersonate = 1;
 
@@ -844,6 +1103,7 @@ default_socket_timeout = 60
 ; If you wish to have an extension loaded automatically, use the following
 ; syntax:
 ;
+<<<<<<< HEAD
 ; extension=modulename.extension
 ;
 ; For example, on Windows:
@@ -857,6 +1117,21 @@ default_socket_timeout = 60
 ; ... or with a path:
 ;
 ; extension=/path/to/extension/msql.so
+=======
+;   extension=modulename.extension
+;
+; For example, on Windows:
+;
+;   extension=msql.dll
+;
+; ... or under UNIX:
+;
+;   extension=msql.so
+;
+; ... or with a path:
+;
+;   extension=/path/to/extension/msql.so
+>>>>>>> Merge
 ;
 ; If you only provide the name of the extension, PHP will look for it in its
 ; default extension directory.
@@ -873,7 +1148,11 @@ cli_server.color = On
 [Date]
 ; Defines the default timezone used by the date functions
 ; http://php.net/date.timezone
+<<<<<<< HEAD
 date.timezone = {{ php5.php_date_timezone }}
+=======
+date.timezone = {{ php_date_timezone }}
+>>>>>>> Merge
 
 ; http://php.net/date.default-latitude
 ;date.default_latitude = 31.7667
@@ -937,7 +1216,11 @@ date.timezone = {{ php5.php_date_timezone }}
 ; http://php.net/pdo_mysql.cache_size
 pdo_mysql.cache_size = 2000
 
+<<<<<<< HEAD
 ; Default socket name for local MySQL connects. If empty, uses the built-in
+=======
+; Default socket name for local MySQL connects.  If empty, uses the built-in
+>>>>>>> Merge
 ; MySQL defaults.
 ; http://php.net/pdo_mysql.default-socket
 pdo_mysql.default_socket=
@@ -962,7 +1245,11 @@ smtp_port = 25
 ; http://php.net/sendmail-from
 ;sendmail_from = me@example.com
 
+<<<<<<< HEAD
 ; For Unix only. You may supply arguments as well (default: "sendmail -t -i").
+=======
+; For Unix only.  You may supply arguments as well (default: "sendmail -t -i").
+>>>>>>> Merge
 ; http://php.net/sendmail-path
 ;sendmail_path =
 
@@ -984,6 +1271,7 @@ sql.safe_mode = Off
 
 [ODBC]
 ; http://php.net/odbc.default-db
+<<<<<<< HEAD
 ;odbc.default_db = Not yet implemented
 
 ; http://php.net/odbc.default-user
@@ -991,6 +1279,15 @@ sql.safe_mode = Off
 
 ; http://php.net/odbc.default-pw
 ;odbc.default_pw = Not yet implemented
+=======
+;odbc.default_db    =  Not yet implemented
+
+; http://php.net/odbc.default-user
+;odbc.default_user  =  Not yet implemented
+
+; http://php.net/odbc.default-pw
+;odbc.default_pw    =  Not yet implemented
+>>>>>>> Merge
 
 ; Controls the ODBC cursor model.
 ; Default: SQL_CURSOR_STATIC (default).
@@ -1004,6 +1301,7 @@ odbc.allow_persistent = On
 ; http://php.net/odbc.check-persistent
 odbc.check_persistent = On
 
+<<<<<<< HEAD
 ; Maximum number of persistent links. -1 means no limit.
 ; http://php.net/odbc.max-persistent
 odbc.max_persistent = -1
@@ -1013,11 +1311,26 @@ odbc.max_persistent = -1
 odbc.max_links = -1
 
 ; Handling of LONG fields. Returns number of bytes to variables. 0 means
+=======
+; Maximum number of persistent links.  -1 means no limit.
+; http://php.net/odbc.max-persistent
+odbc.max_persistent = -1
+
+; Maximum number of links (persistent + non-persistent).  -1 means no limit.
+; http://php.net/odbc.max-links
+odbc.max_links = -1
+
+; Handling of LONG fields.  Returns number of bytes to variables.  0 means
+>>>>>>> Merge
 ; passthru.
 ; http://php.net/odbc.defaultlrl
 odbc.defaultlrl = 4096
 
+<<<<<<< HEAD
 ; Handling of binary data. 0 means passthru, 1 return as is, 2 convert to char.
+=======
+; Handling of binary data.  0 means passthru, 1 return as is, 2 convert to char.
+>>>>>>> Merge
 ; See the documentation on odbc_binmode and odbc_longreadlen for an explanation
 ; of odbc.defaultlrl and odbc.defaultbinmode
 ; http://php.net/odbc.defaultbinmode
@@ -1029,10 +1342,17 @@ odbc.defaultbinmode = 1
 ; Allow or prevent persistent links.
 ibase.allow_persistent = 1
 
+<<<<<<< HEAD
 ; Maximum number of persistent links. -1 means no limit.
 ibase.max_persistent = -1
 
 ; Maximum number of links (persistent + non-persistent). -1 means no limit.
+=======
+; Maximum number of persistent links.  -1 means no limit.
+ibase.max_persistent = -1
+
+; Maximum number of links (persistent + non-persistent).  -1 means no limit.
+>>>>>>> Merge
 ibase.max_links = -1
 
 ; Default database name for ibase_connect().
@@ -1069,6 +1389,7 @@ mysql.allow_persistent = On
 ; http://php.net/mysql.cache_size
 mysql.cache_size = 2000
 
+<<<<<<< HEAD
 ; Maximum number of persistent links. -1 means no limit.
 ; http://php.net/mysql.max-persistent
 mysql.max_persistent = -1
@@ -1080,11 +1401,28 @@ mysql.max_links = -1
 ; Default port number for mysql_connect(). If unset, mysql_connect() will use
 ; the $MYSQL_TCP_PORT or the mysql-tcp entry in /etc/services or the
 ; compile-time value defined MYSQL_PORT (in that order). Win32 will only look
+=======
+; Maximum number of persistent links.  -1 means no limit.
+; http://php.net/mysql.max-persistent
+mysql.max_persistent = -1
+
+; Maximum number of links (persistent + non-persistent).  -1 means no limit.
+; http://php.net/mysql.max-links
+mysql.max_links = -1
+
+; Default port number for mysql_connect().  If unset, mysql_connect() will use
+; the $MYSQL_TCP_PORT or the mysql-tcp entry in /etc/services or the
+; compile-time value defined MYSQL_PORT (in that order).  Win32 will only look
+>>>>>>> Merge
 ; at MYSQL_PORT.
 ; http://php.net/mysql.default-port
 mysql.default_port =
 
+<<<<<<< HEAD
 ; Default socket name for local MySQL connects. If empty, uses the built-in
+=======
+; Default socket name for local MySQL connects.  If empty, uses the built-in
+>>>>>>> Merge
 ; MySQL defaults.
 ; http://php.net/mysql.default-socket
 mysql.default_socket =
@@ -1100,7 +1438,11 @@ mysql.default_user =
 ; Default password for mysql_connect() (doesn't apply in safe mode).
 ; Note that this is generally a *bad* idea to store passwords in this file.
 ; *Any* user with PHP access can run 'echo get_cfg_var("mysql.default_password")
+<<<<<<< HEAD
 ; and reveal this password! And of course, any users with read access to this
+=======
+; and reveal this password!  And of course, any users with read access to this
+>>>>>>> Merge
 ; file will be able to reveal the password as well.
 ; http://php.net/mysql.default-password
 mysql.default_password =
@@ -1116,7 +1458,11 @@ mysql.trace_mode = Off
 
 [MySQLi]
 
+<<<<<<< HEAD
 ; Maximum number of persistent links. -1 means no limit.
+=======
+; Maximum number of persistent links.  -1 means no limit.
+>>>>>>> Merge
 ; http://php.net/mysqli.max-persistent
 mysqli.max_persistent = -1
 
@@ -1128,7 +1474,11 @@ mysqli.max_persistent = -1
 ; http://php.net/mysqli.allow-persistent
 mysqli.allow_persistent = On
 
+<<<<<<< HEAD
 ; Maximum number of links. -1 means no limit.
+=======
+; Maximum number of links.  -1 means no limit.
+>>>>>>> Merge
 ; http://php.net/mysqli.max-links
 mysqli.max_links = -1
 
@@ -1136,14 +1486,24 @@ mysqli.max_links = -1
 ; http://php.net/mysqli.cache_size
 mysqli.cache_size = 2000
 
+<<<<<<< HEAD
 ; Default port number for mysqli_connect(). If unset, mysqli_connect() will use
 ; the $MYSQL_TCP_PORT or the mysql-tcp entry in /etc/services or the
 ; compile-time value defined MYSQL_PORT (in that order). Win32 will only look
+=======
+; Default port number for mysqli_connect().  If unset, mysqli_connect() will use
+; the $MYSQL_TCP_PORT or the mysql-tcp entry in /etc/services or the
+; compile-time value defined MYSQL_PORT (in that order).  Win32 will only look
+>>>>>>> Merge
 ; at MYSQL_PORT.
 ; http://php.net/mysqli.default-port
 mysqli.default_port = 3306
 
+<<<<<<< HEAD
 ; Default socket name for local MySQL connects. If empty, uses the built-in
+=======
+; Default socket name for local MySQL connects.  If empty, uses the built-in
+>>>>>>> Merge
 ; MySQL defaults.
 ; http://php.net/mysqli.default-socket
 mysqli.default_socket =
@@ -1159,7 +1519,11 @@ mysqli.default_user =
 ; Default password for mysqli_connect() (doesn't apply in safe mode).
 ; Note that this is generally a *bad* idea to store passwords in this file.
 ; *Any* user with PHP access can run 'echo get_cfg_var("mysqli.default_pw")
+<<<<<<< HEAD
 ; and reveal this password! And of course, any users with read access to this
+=======
+; and reveal this password!  And of course, any users with read access to this
+>>>>>>> Merge
 ; file will be able to reveal the password as well.
 ; http://php.net/mysqli.default-pw
 mysqli.default_pw =
@@ -1214,7 +1578,11 @@ mysqlnd.collect_memory_statistics = Off
 
 ; Connection: Set this to a user chosen connection class to be used
 ; for all pooled server requests with Oracle 11g Database Resident
+<<<<<<< HEAD
 ; Connection Pooling (DRCP). To use DRCP, this value should be set to
+=======
+; Connection Pooling (DRCP).  To use DRCP, this value should be set to
+>>>>>>> Merge
 ; the same string for all web servers running the same application,
 ; the database pool must be configured, and the connection string must
 ; specify to use a pooled server.
@@ -1250,11 +1618,19 @@ pgsql.allow_persistent = On
 ; http://php.net/pgsql.auto-reset-persistent
 pgsql.auto_reset_persistent = Off
 
+<<<<<<< HEAD
 ; Maximum number of persistent links. -1 means no limit.
 ; http://php.net/pgsql.max-persistent
 pgsql.max_persistent = -1
 
 ; Maximum number of links (persistent+non persistent). -1 means no limit.
+=======
+; Maximum number of persistent links.  -1 means no limit.
+; http://php.net/pgsql.max-persistent
+pgsql.max_persistent = -1
+
+; Maximum number of links (persistent+non persistent).  -1 means no limit.
+>>>>>>> Merge
 ; http://php.net/pgsql.max-links
 pgsql.max_links = -1
 
@@ -1273,11 +1649,19 @@ pgsql.log_notice = 0
 ; http://php.net/sybct.allow-persistent
 sybct.allow_persistent = On
 
+<<<<<<< HEAD
 ; Maximum number of persistent links. -1 means no limit.
 ; http://php.net/sybct.max-persistent
 sybct.max_persistent = -1
 
 ; Maximum number of links (persistent + non-persistent). -1 means no limit.
+=======
+; Maximum number of persistent links.  -1 means no limit.
+; http://php.net/sybct.max-persistent
+sybct.max_persistent = -1
+
+; Maximum number of links (persistent + non-persistent).  -1 means no limit.
+>>>>>>> Merge
 ; http://php.net/sybct.max-links
 sybct.max_links = -1
 
@@ -1321,29 +1705,51 @@ bcmath.scale = 0
 ; http://php.net/session.save-handler
 session.save_handler = files
 
+<<<<<<< HEAD
 ; Argument passed to save_handler. In the case of files, this is the path
+=======
+; Argument passed to save_handler.  In the case of files, this is the path
+>>>>>>> Merge
 ; where data files are stored. Note: Windows users have to change this
 ; variable in order to use PHP's session functions.
 ;
 ; The path can be defined as:
 ;
+<<<<<<< HEAD
 ; session.save_path = "N;/path"
 ;
 ; where N is an integer. Instead of storing all the session files in
 ; /path, what this will do is use subdirectories N-levels deep, and
 ; store the session data in those directories. This is useful if you
+=======
+;     session.save_path = "N;/path"
+;
+; where N is an integer.  Instead of storing all the session files in
+; /path, what this will do is use subdirectories N-levels deep, and
+; store the session data in those directories.  This is useful if you
+>>>>>>> Merge
 ; or your OS have problems with lots of files in one directory, and is
 ; a more efficient layout for servers that handle lots of sessions.
 ;
 ; NOTE 1: PHP will not create this directory structure automatically.
+<<<<<<< HEAD
 ; You can use the script in the ext/session dir for that purpose.
 ; NOTE 2: See the section on garbage collection below if you choose to
 ; use subdirectories for session storage
+=======
+;         You can use the script in the ext/session dir for that purpose.
+; NOTE 2: See the section on garbage collection below if you choose to
+;         use subdirectories for session storage
+>>>>>>> Merge
 ;
 ; The file storage module creates files using mode 600 by default.
 ; You can change that by using
 ;
+<<<<<<< HEAD
 ; session.save_path = "N;MODE;/path"
+=======
+;     session.save_path = "N;MODE;/path"
+>>>>>>> Merge
 ;
 ; where MODE is the octal representation of the mode. Note that this
 ; does not overwrite the process's umask.
@@ -1388,7 +1794,11 @@ session.cookie_domain =
 ; http://php.net/session.cookie-httponly
 session.cookie_httponly =
 
+<<<<<<< HEAD
 ; Handler used to serialize data. php is the standard serializer of PHP.
+=======
+; Handler used to serialize data.  php is the standard serializer of PHP.
+>>>>>>> Merge
 ; http://php.net/session.serialize-handler
 session.serialize_handler = php
 
@@ -1424,12 +1834,21 @@ session.gc_divisor = 1000
 session.gc_maxlifetime = 1440
 
 ; NOTE: If you are using the subdirectory option for storing session files
+<<<<<<< HEAD
 ; (see session.save_path above), then garbage collection does *not*
 ; happen automatically. You will need to do your own garbage
 ; collection through a shell script, cron entry, or some other method.
 ; For example, the following script would is the equivalent of
 ; setting session.gc_maxlifetime to 1440 (1440 seconds = 24 minutes):
 ; find /path/to/sessions -cmin +24 | xargs rm
+=======
+;       (see session.save_path above), then garbage collection does *not*
+;       happen automatically.  You will need to do your own garbage
+;       collection through a shell script, cron entry, or some other method.
+;       For example, the following script would is the equivalent of
+;       setting session.gc_maxlifetime to 1440 (1440 seconds = 24 minutes):
+;          find /path/to/sessions -cmin +24 | xargs rm
+>>>>>>> Merge
 
 ; PHP 4.2 and less have an undocumented feature/bug that allows you to
 ; to initialize a session variable in the global scope.
@@ -1488,18 +1907,31 @@ session.cache_expire = 180
 ; Use of trans sid may risk your users security.
 ; Use this option with caution.
 ; - User may send URL contains active session ID
+<<<<<<< HEAD
 ; to other person via. email/irc/etc.
 ; - URL that contains active session ID may be stored
 ; in publicly accessible computer.
 ; - User may access your site with the same session ID
 ; always using URL stored in browser's history or bookmarks.
+=======
+;   to other person via. email/irc/etc.
+; - URL that contains active session ID may be stored
+;   in publicly accessible computer.
+; - User may access your site with the same session ID
+;   always using URL stored in browser's history or bookmarks.
+>>>>>>> Merge
 ; http://php.net/session.use-trans-sid
 session.use_trans_sid = 0
 
 ; Select a hash function for use in generating session ids.
 ; Possible Values
+<<<<<<< HEAD
 ; 0 (MD5 128 bits)
 ; 1 (SHA-1 160 bits)
+=======
+;   0  (MD5 128 bits)
+;   1  (SHA-1 160 bits)
+>>>>>>> Merge
 ; This option may also be set to the name of any hash function supported by
 ; the hash extension. A list of available hashes is returned by the hash_algos()
 ; function.
@@ -1509,9 +1941,15 @@ session.hash_function = 0
 ; Define how many bits are stored in each character when converting
 ; the binary hash data to something readable.
 ; Possible values:
+<<<<<<< HEAD
 ; 4 (4 bits: 0-9, a-f)
 ; 5 (5 bits: 0-9, a-v)
 ; 6 (6 bits: 0-9, a-z, A-Z, "-", ",")
+=======
+;   4  (4 bits: 0-9, a-f)
+;   5  (5 bits: 0-9, a-v)
+;   6  (6 bits: 0-9, a-z, A-Z, "-", ",")
+>>>>>>> Merge
 ; Default Value: 4
 ; Development Value: 5
 ; Production Value: 5
@@ -1521,7 +1959,11 @@ session.hash_bits_per_character = 5
 ; The URL rewriter will look for URLs in a defined set of HTML tags.
 ; form/fieldset are special; if you include them here, the rewriter will
 ; add a hidden <input> field with the info which is otherwise appended
+<<<<<<< HEAD
 ; to URLs. If you want XHTML conformity, remove the form entry.
+=======
+; to URLs.  If you want XHTML conformity, remove the form entry.
+>>>>>>> Merge
 ; Note that all valid entries require a "=", even if no value follows.
 ; Default Value: "a=href,area=href,frame=src,form=,fieldset="
 ; Development Value: "a=href,area=href,frame=src,input=src,form=fakeentry"
@@ -1565,7 +2007,11 @@ url_rewriter.tags = "a=href,area=href,frame=src,input=src,form=fakeentry"
 ; Development Value: "1%"
 ; Production Value: "1%"
 ; http://php.net/session.upload-progress.freq
+<<<<<<< HEAD
 ;session.upload_progress.freq = "1%"
+=======
+;session.upload_progress.freq =  "1%"
+>>>>>>> Merge
 
 ; The minimum delay between updates, in seconds
 ; Default Value: 1
@@ -1578,10 +2024,17 @@ url_rewriter.tags = "a=href,area=href,frame=src,input=src,form=fakeentry"
 ; Allow or prevent persistent links.
 mssql.allow_persistent = On
 
+<<<<<<< HEAD
 ; Maximum number of persistent links. -1 means no limit.
 mssql.max_persistent = -1
 
 ; Maximum number of links (persistent+non persistent). -1 means no limit.
+=======
+; Maximum number of persistent links.  -1 means no limit.
+mssql.max_persistent = -1
+
+; Maximum number of links (persistent+non persistent).  -1 means no limit.
+>>>>>>> Merge
 mssql.max_links = -1
 
 ; Minimum error severity to display.
@@ -1599,6 +2052,7 @@ mssql.compatability_mode = Off
 ; Query timeout
 ;mssql.timeout = 60
 
+<<<<<<< HEAD
 ; Valid range 0 - 2147483647. Default = 4096.
 ;mssql.textlimit = 4096
 
@@ -1606,6 +2060,15 @@ mssql.compatability_mode = Off
 ;mssql.textsize = 4096
 
 ; Limits the number of records in each batch. 0 = all records in one batch.
+=======
+; Valid range 0 - 2147483647.  Default = 4096.
+;mssql.textlimit = 4096
+
+; Valid range 0 - 2147483647.  Default = 4096.
+;mssql.textsize = 4096
+
+; Limits the number of records in each batch.  0 = all records in one batch.
+>>>>>>> Merge
 ;mssql.batchsize = 0
 
 ; Specify how datetime and datetim4 columns are returned
@@ -1643,7 +2106,11 @@ mssql.secure_connection = Off
 ; http://php.net/assert.callback
 ;assert.callback = 0
 
+<<<<<<< HEAD
 ; Eval the expression with current error_reporting(). Set to true if you want
+=======
+; Eval the expression with current error_reporting().  Set to true if you want
+>>>>>>> Merge
 ; error_reporting(0) around the eval().
 ; http://php.net/assert.quiet-eval
 ;assert.quiet_eval = 0
@@ -1697,7 +2164,11 @@ mssql.secure_connection = Off
 ; mbstring.internal_encoding setting. Input chars are
 ; converted to internal encoding by setting this to On.
 ; Note: Do _not_ use automatic encoding translation for
+<<<<<<< HEAD
 ; portable libs/applications.
+=======
+;       portable libs/applications.
+>>>>>>> Merge
 ; http://php.net/mbstring.encoding-translation
 ;mbstring.encoding_translation = Off
 
@@ -1750,7 +2221,11 @@ mssql.secure_connection = Off
 ;exif.decode_unicode_motorola = UCS-2BE
 
 ; http://php.net/exif.decode-unicode-intel
+<<<<<<< HEAD
 ;exif.decode_unicode_intel = UCS-2LE
+=======
+;exif.decode_unicode_intel    = UCS-2LE
+>>>>>>> Merge
 
 ; http://php.net/exif.encode-jis
 ;exif.encode_jis =
@@ -1759,7 +2234,11 @@ mssql.secure_connection = Off
 ;exif.decode_jis_motorola = JIS
 
 ; http://php.net/exif.decode-jis-intel
+<<<<<<< HEAD
 ;exif.decode_jis_intel = JIS
+=======
+;exif.decode_jis_intel    = JIS
+>>>>>>> Merge
 
 [Tidy]
 ; The path to a default tidy configuration file to use when using tidy
@@ -1813,4 +2292,8 @@ ldap.max_links = -1
 
 ; Local Variables:
 ; tab-width: 4
+<<<<<<< HEAD
 ; End:
+=======
+; End:
+>>>>>>> Merge

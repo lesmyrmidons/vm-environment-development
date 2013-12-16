@@ -1,0 +1,12 @@
+module MyVars
+
+    SF_VM_NAME = "symfony2-debian-7.x"
+    PATH_SHARE_FOLDER = "."
+<<<<<<< HEAD
+    PATH_MOUNT_FOLDER = "/vagrant"
+=======
+    PATH_MOUNT_FOLDER = "/data"
+>>>>>>> Merge
+    ANSIBLE_VERBOSE = "-vvv"
+
+end

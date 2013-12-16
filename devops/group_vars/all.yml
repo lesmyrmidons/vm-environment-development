@@ -10,8 +10,9 @@ php5:
 
 web:
   httpd_port: 80
-  domain: dev.test-deploy.com
-  project_path: /data/dev.test-deploy.com
+  host: wantedeal
+  domain: wantedeal
+  project_path: /data/wantedeal
   directory_index: app.php
 
 mariadb:

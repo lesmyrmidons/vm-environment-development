@@ -11,8 +11,14 @@
     - php5-cli
     - php5-xdebug
     - php5-dev
+    - php5-mysql
   tags: php5
   notify: Restart apache
+
+- name: PHP5 | Install PHP 5 MYSQL Module
+  apt: pkg=$item state=installed
+  with_items:
+    - php5-mysql
 
 - name: PHP5 | Install PHP 5 Mongo Module
   shell: pecl install mongo

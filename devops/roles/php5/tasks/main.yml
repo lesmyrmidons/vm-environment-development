@@ -21,7 +21,8 @@
     - php5-mysql
 
 - name: PHP5 | Install PHP 5 Mongo Module
-  shell: pecl install mongo
+  action: command pecl install mongo creates=/usr/lib/php5/mongo/mongo.so
+  ignore_errors: yes
   tags: php5
 
 - name: PHP5 | Configure PHP to use PECL MongoDB extension

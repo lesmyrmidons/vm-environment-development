@@ -5,6 +5,8 @@ url_apt_key: "http://keyserver.ubuntu.com/pks/lookup?op=get&search="
 
 ntpserver: '0.fr.pool.ntp.org'
 
+locale: en_US.UTF-8
+
 php5:
   php_date_timezone: 'Europe/Paris'
 

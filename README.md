@@ -6,8 +6,8 @@ Automating the installation of VM and mandatory packages for a Web application.
 Requirements
 ------------
 
-* [Vagrant >=1.3.5](docs/vagrant-install.md)
-* [Ansible >=1.3.3](docs/ansible-install.md)
+* [Vagrant >=1.5](docs/vagrant-install.md)
+* [Ansible >=1.5.1](docs/ansible-install.md)
 
 Configuration
 -------------

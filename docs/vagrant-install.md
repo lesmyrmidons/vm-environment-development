@@ -1,6 +1,6 @@
 Installation Vagrant
 ====================
 
-To install Vagrant, you should download the minimum `v1.3.5` release. [Go
+To install Vagrant, you should download the minimum `v1.5.4` release. [Go
 here](http://downloads.vagrantup.com/).
 

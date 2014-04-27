@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "sf" do |sf_config|
-    sf_config.vm.box = "wheezy64"
+    sf_config.vm.box = "tnitti/debian-7.4-amd64"
     sf_config.vm.box_url = "http://downloads.shadoware.org/wheezy64.box"
     sf_config.vm.hostname = 'machine1'
     sf_config.vm.network :"private_network", ip: "192.168.40.10"

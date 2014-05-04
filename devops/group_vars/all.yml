@@ -19,8 +19,5 @@ web:
   project_path: /vagrant/wantedeal
   directory_index: app_dev.php
 
-php5:
-  php_date_timezone: 'Europe/Paris'
-
 mariadb:
   root_password: dev

@@ -5,6 +5,10 @@
 # for 1.6 this ansible
 #- name: Create en_US.UTF-8 locale
 #  locale_gen: name=en_US.UTF-8 state=present
+# Set default locale to fr_FR.UTF-8
+#debconf: name=locales question='locales/default_environment_locale' value=fr_FR.UTF-8 vtype='select'
+# Set to generate locales
+#debconf: name=locales question='locales/locales_to_be_generated'  value='en_US.UTF-8 UTF-8, fr_FR.UTF-8 UTF-8' vtype='multiselect'
 
 - name: Set default language
   template: src=locale.gen.j2 dest=/etc/locale.gen
@@ -13,7 +17,7 @@
   command: locale-gen en_US.UTF-8
 
 #- name: set locale to {{ locale }}
-#  command: /usr/sbin/update-locale LANG={{ locale }} LC_ALL={{ locale }} LANGUAGE=en_US:en
+#  command: update-locale LANG={{ locale }} LC_ALL={{ locale }} LANGUAGE=en_US:en
 
 - name: Install ntp
   apt: name=ntp state=present
@@ -37,7 +41,6 @@
 - name: Install lists packages
   action: apt pkg={{ item }} state=installed
   with_items:
-    - vim
     - zsh
     - curl
     - wget

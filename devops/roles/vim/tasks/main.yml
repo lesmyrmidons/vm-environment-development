@@ -1,5 +1,10 @@
 ---
 
+- name: VIM | Install lists packages
+  action: apt pkg={{ item }} state=installed
+  with_items:
+    - vim
+
 # Install custom vim
 - name: VIM | Clone vim config
   sudo: false

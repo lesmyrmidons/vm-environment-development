@@ -43,3 +43,7 @@ Installed application
 * Phpmyadmin (To administration database)
 * git
 
+License
+-------
+
+MIT / BSD

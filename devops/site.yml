@@ -24,9 +24,10 @@
     - group_vars/all.yml
 
   roles:
-    - mongodb
-    - web
+    - mongodb     # Database NoSQL
+    - web         # Apache2
+    - mariadb     # Equivalent MySQL
     - php5
-    - mariadb
     - composer
-    - ajenti
+    - nodejs      # 
+    - ajenti      # admin system https://192.168.40.10:8000

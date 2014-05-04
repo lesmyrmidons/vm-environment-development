@@ -5,6 +5,8 @@ url_apt_key: "http://keyserver.ubuntu.com/pks/lookup?op=get&search="
 
 ntpserver: '0.fr.pool.ntp.org'
 
+user: vagrant
+
 locale: en_US.UTF-8
 
 php5:
@@ -12,13 +14,10 @@ php5:
 
 web:
   httpd_port: 80
-  host: wantedeal
-  domain: wantedeal
-  project_path: /data/wantedeal
-  directory_index: app.php
-
-php5:
-  php_date_timezone: 'Europe/Paris'
+  host: wantedeal.fr
+  domain: dev.wantedeal.fr
+  project_path: /vagrant/wantedeal
+  directory_index: app_dev.php
 
 mariadb:
   root_password: dev

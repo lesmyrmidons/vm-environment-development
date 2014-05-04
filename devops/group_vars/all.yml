@@ -14,10 +14,10 @@ php5:
 
 web:
   httpd_port: 80
-  host: wantedeal
-  domain: wantedeal
-  project_path: /data/wantedeal
-  directory_index: app.php
+  host: wantedeal.fr
+  domain: dev.wantedeal.fr
+  project_path: /vagrant/wantedeal
+  directory_index: app_dev.php
 
 php5:
   php_date_timezone: 'Europe/Paris'

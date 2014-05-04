@@ -12,8 +12,11 @@
 
   roles:
     - common
+    - vim
 
 - hosts: sfserver
+  max_fail_percentage: 30
+  serial: 10
   user: vagrant
   sudo: yes
 

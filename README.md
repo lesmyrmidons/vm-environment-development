@@ -12,6 +12,12 @@ Requirements
 Configuration
 -------------
 
+Install role dependency:
+
+```bash
+$ ansible-galaxy install leonidas.nvm
+```
+
 Download and move to folder:
 
 ```bash

@@ -29,5 +29,9 @@
     - mariadb     # Equivalent MySQL
     - php5
     - composer
-    - nodejs      # 
     - ajenti      # admin system https://192.168.40.10:8000
+    - role: leonidas.nvm
+      nvm:
+        user: vagrant
+        version: v0.7.0
+        node_version: '0.10'

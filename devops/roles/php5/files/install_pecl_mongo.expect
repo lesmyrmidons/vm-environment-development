@@ -1,0 +1,8 @@
+#!/usr/bin/expect
+
+spawn pecl install mongo
+
+expect "Build with Cyrus SASL"
+send "\r"
+
+expect eof

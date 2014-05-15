@@ -13,6 +13,7 @@
     - php5-dev
     - php5-mysql
     - php5-json
+    - expect
   tags: php5
   notify: Restart apache
 
@@ -26,10 +27,10 @@
   command: pear config-set auto_discover 1
 
 - name: PHP5 | Install PHP 5 Mongo Module
-  command: pecl install mongo
+  script: install_pecl_mongo.expect
   register: pecl_result
-  changed_when: "'already installed' not in pecl_result.stdout"
   failed_when: "pecl_result.stderr"
+  ignore_errors: true
   tags: php5
 
 - name: Mongodb | Configure PHP to use PECL MongoDB extension

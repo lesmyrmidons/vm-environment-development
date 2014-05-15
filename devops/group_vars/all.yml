@@ -7,7 +7,7 @@ ntpserver: '0.fr.pool.ntp.org'
 
 user: vagrant
 
-locale: en_US.UTF-8
+locale: fr_FR.UTF-8
 
 php5:
   php_date_timezone: 'Europe/Paris'

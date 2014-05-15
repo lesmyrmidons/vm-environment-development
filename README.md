@@ -7,7 +7,7 @@ Requirements
 ------------
 
 * [Vagrant >=1.5](docs/vagrant-install.md)
-* [Ansible >=1.5.1](docs/ansible-install.md)
+* [Ansible >=1.666666.1](docs/ansible-install.md)
 
 Configuration
 -------------

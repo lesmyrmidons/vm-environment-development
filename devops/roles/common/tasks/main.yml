@@ -5,10 +5,30 @@
 # for 1.6 this ansible
 - name: Create {{ locale }} locale
   locale_gen: name={{ locale }} state=present
-# Set default locale to fr_FR.UTF-8
-#debconf: name=locales question='locales/default_environment_locale' value=fr_FR.UTF-8 vtype='select'
-# Set to generate locales
-#debconf: name=locales question='locales/locales_to_be_generated'  value='en_US.UTF-8 UTF-8, fr_FR.UTF-8 UTF-8' vtype='multiselect'
+
+- name: Add LC_ALL into environment
+  lineinfile:
+    dest=/etc/environment
+    regexp="^LC_ALL="
+    line="LC_ALL=fr_FR.UTF-8"
+    backup=yes
+    state=present
+  register: locale_result
+
+- name: reboot
+  command: /sbin/reboot
+  when: locale_result.changed == true
+
+- name: test is stopped
+  sudo: false
+  local_action: wait_for host={{inventory_hostname}} port=22 state=stopped
+  when: locale_result.changed == true
+
+- name: test is started
+  sudo: false
+  local_action: wait_for host={{inventory_hostname}} port=22
+  when: locale_result.changed == true
+  ignore_errors: yes
 
 - name: Install ntp
   apt: name=ntp state=present

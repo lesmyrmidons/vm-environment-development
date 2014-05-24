@@ -27,4 +27,4 @@
   ignore_errors: yes
 
 - name: Font | Add font for vim
-  unarchive: src=../files/powerline.tar.gz dest=/home/{{ user }}/.font
+  unarchive: src=powerline.tar.gz dest=/home/{{ user }}/.font

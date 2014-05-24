@@ -1,0 +1,4 @@
+---
+
+mariadb_root_password: "dev"
+mariadb_current_password: ""

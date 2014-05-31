@@ -1,8 +1,0 @@
----
-# List handlers for Apache2
-
-- name: Restart apache
-  action: service name=apache2 state=restarted
-
-- name: Graceful Apache
-  action: service name=apache2 state=graceful

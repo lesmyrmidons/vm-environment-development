@@ -16,6 +16,7 @@ Install role dependency:
 
 ```bash
 $ ansible-galaxy install leonidas.nvm
+$ ansible-galaxy install geerlingguy.apache
 ```
 
 Download and move to folder:
@@ -46,6 +47,7 @@ Installed application
 * Mariadb (equal mysql)
 * MongoDB (No-SQL)
 * PHP5 (PHP 5.4.x)
+* Composer (Dependency manager for PHP)
 * Phpmyadmin (To administration database)
 * git
 

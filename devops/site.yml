@@ -25,7 +25,7 @@
 
   roles:
     - mongodb     # Database NoSQL
-    - web         # Apache2
+    - role: geerlingguy.apache       # Apache2
     - mariadb     # Equivalent MySQL
     - php5
     - composer

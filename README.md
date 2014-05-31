@@ -8,6 +8,7 @@ Requirements
 
 * [Vagrant >=1.5](docs/vagrant-install.md)
 * [Ansible >=1.6.1](docs/ansible-install.md)
+* lsyncd
 
 Configuration
 -------------
@@ -40,15 +41,25 @@ For run VM and execute ansible for install all package:
 $ vagrant up --provision
 ```
 
+Synchronize the project with the VM to develop
+----------------------------------------------
+
+To do this, we will use lsyncd. You just run it once.
+
+```bash
+$ lsyncd -rsyncssh /folder/project vagrant@192.168.40.10 /vagrant/project/
+```
+
 Installed application
 ---------------------
 
 * Ajenti (Web administration server)
 * Mariadb (equal mysql)
-* MongoDB (No-SQL)
+* MongoDB (No-SQL v2.6.1)
 * PHP5 (PHP 5.4.x)
 * Composer (Dependency manager for PHP)
 * Phpmyadmin (To administration database)
+* nvm (Virtual Nodejs)
 * git
 
 License

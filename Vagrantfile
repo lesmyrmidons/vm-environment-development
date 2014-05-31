@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     sf_config.vm.box_url = "http://downloads.shadoware.org/wheezy64.box"
     sf_config.vm.hostname = 'machine1'
     sf_config.vm.network :"private_network", ip: "192.168.40.10"
-    sf_config.vm.synced_folder PATH_SHARE_FOLDER, PATH_MOUNT_FOLDER, type: "nfs"
+    sf_config.vm.synced_folder PATH_SHARE_FOLDER, PATH_MOUNT_FOLDER, disabled: true, type: "nfs"
 
 #    config.vm.provider :virtualbox do |v|
 #      v.name = SF_VM_NAME

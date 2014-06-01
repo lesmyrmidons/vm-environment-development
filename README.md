@@ -18,6 +18,7 @@ Install role dependency:
 ```bash
 $ ansible-galaxy install leonidas.nvm
 $ ansible-galaxy install geerlingguy.apache
+$ ansible-galaxy install lesmyrmidons.mongodb
 ```
 
 Download and move to folder:

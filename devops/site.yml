@@ -22,9 +22,10 @@
 
   vars_files:
     - group_vars/all.yml
+    - group_vars/apache.yml
 
   roles:
-    - mongodb     # Database NoSQL
+    - role: lesmyrmidons.mongodb     # Database NoSQL
     - role: geerlingguy.apache       # Apache2
     - mariadb     # Equivalent MySQL
     - php5

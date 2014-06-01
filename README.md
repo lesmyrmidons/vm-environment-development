@@ -35,7 +35,7 @@ Change the file `parameters.rb` as desired.
 Run
 ---
 
-For run VM and execute ansible for install all package:
+To run VM and execute ansible for install all package:
 
 ```bash
 $ vagrant up --provision
@@ -44,7 +44,7 @@ $ vagrant up --provision
 Synchronize the project with the VM to develop
 ----------------------------------------------
 
-To do this, we will use lsyncd. You just run it once.
+To do this, we will use lsyncd. Have to run it once.
 
 ```bash
 $ lsyncd -rsyncssh /folder/project vagrant@192.168.40.10 /vagrant/project/

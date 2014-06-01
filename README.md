@@ -44,7 +44,7 @@ $ vagrant up --provision
 Synchronize the project with the VM to develop
 ----------------------------------------------
 
-To do this, we will use lsyncd. You just run it once.
+To do so, we will use lsyncd. You just run it once.
 
 ```bash
 $ lsyncd -rsyncssh /folder/project vagrant@192.168.40.10 /vagrant/project/

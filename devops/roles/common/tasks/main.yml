@@ -52,6 +52,7 @@
 - name: Install lists packages
   action: apt pkg={{ item }} state=installed
   with_items:
+    - acl
     - zsh
     - curl
     - wget

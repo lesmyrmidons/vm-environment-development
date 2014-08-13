@@ -2,7 +2,7 @@ apache_listen_port: 80
 
 apache_vhosts:
   # Additional optional properties: 'serveradmin, extra_parameters'.
-  - {servername: "dev.wantedeal.fr", documentroot: "/vagrant/wantedeal/web"}
+  - {servername: "example.com", documentroot: "/data/web"}
 
 apache_mods_enabled:
   - rewrite.load

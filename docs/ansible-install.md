@@ -19,6 +19,11 @@ Install ansible:
 $ pip install ansible
 ```
 
+If upgrade ansible:
+```bash
+$ pip install ansible --upgrade
+```
+
 Checking the installed release:
 ```bash
 $ ansible --version

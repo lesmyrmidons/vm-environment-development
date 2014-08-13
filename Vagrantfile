@@ -26,6 +26,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       ansible.playbook = "devops/site.yml"
       ansible.verbose = ANSIBLE_VERBOSE
       ansible.limit = 'all'
+
+      ansible.extra_vars = { apache_vhosts: [{ servername: APP_DOMAIN_NAME, documentroot: APP_VHOST_DOCUMENT_ROOT }] }
     end
   end
 end

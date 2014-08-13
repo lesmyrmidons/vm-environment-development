@@ -6,4 +6,6 @@ module MyVars
     PATH_MOUNT_FOLDER = "/data"
     ANSIBLE_VERBOSE = "-vvv"
 
+    APP_DOMAIN_NAME = "example.com"
+    APP_VHOST_DOCUMENT_ROOT = "PATH_MOUNT_FOLDER/web"
 end

@@ -1,0 +1,8 @@
+#!/usr/bin/expect
+
+spawn pear upgrade-all
+
+expect "Build with Cyrus SASL"
+send "\r"
+
+expect eof

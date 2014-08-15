@@ -74,3 +74,14 @@
     - tar
     - gzip
     - bzip2
+    - php5-imagick
+    - libpng-dev
+
+- name: Java Oracle | Add repository
+  apt_repository: repo='ppa:webupd8team/java' state=present update_cache=yes
+
+- name: Java Oracle | Automatically select the Oracle License
+  shell: echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+
+- name: Java Oracle | Install version 1.7.x
+  apt: name=oracle-java7-installer state=installed force=yes

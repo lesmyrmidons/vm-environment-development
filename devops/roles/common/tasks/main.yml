@@ -78,7 +78,7 @@
     - libpng-dev
 
 - name: Java Oracle | Add repository
-  apt_repository: repo='ppa:webupd8team/java' state=present update_cache=yes
+  apt_repository: repo='deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' state=present update_cache=yes
 
 - name: Java Oracle | Automatically select the Oracle License
   shell: echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
